@@ -1,0 +1,28 @@
+<html ng-app="expensesApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Simple Expenses Tracker</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <script src="js/app.js"></script>
+    </head>
+    <body ng-controller="ExpensesViewController">
+        <h1>{{phrase}}</h1>
+        {{expense.description}} - {{expense.amount}}
+        <button ng-click="increaseAmount()">Increase amount</button>
+        <div stype="margin-top:50px;">
+            <input ng-model="expense.description" type="text" />
+        </div>
+        <div stype="margin-top:50px;">
+            <input ng-model="expense.amount" type="number" />
+        </div>
+        <div stype="margin-top:50px;">
+            <textarea ng-model="phrase"></textarea>
+        </div>
+
+        <h1>List of elements using ng-repeat</h1>
+        <ul>
+            <li ng-repeat="item in items">{{item.name}} , ingredients:
+                 <span ng-repeat="ingredient in item.ingredients" style="color:blue;">{{ingredient}} </span></li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="d-grid gap-2">
+        <a href="#expenses/new" class="btn btn-success btn-lg">
+            <span class="bi bi-plus-lg"></span>
+                New Expenses
+        </a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <ul class="list-group">
+            <li ng-repeat="expense in expenses" class="list-group-item text-center">
+                <span class="float-start">${{expense.amount | number:2}}</span>{{expense.description | uppercase}}
+
+                <button type="button" class="btn btn-danger btn-s float-end btn-separation-left">
+                    <span class="bi bi-trash"></span>                                
+                </button>
+                <a href="" class="btn btn-primary btn-s float-end">
+                    <span class="bi bi-pencil"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
